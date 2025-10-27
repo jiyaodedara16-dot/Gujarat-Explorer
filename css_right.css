@@ -1,0 +1,290 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.shade1{
+  background-color: #fafafa;
+}
+
+.shade2{
+  background: #bd6501 ;
+}
+
+.shade3{
+  background: #ff9f00 ;
+}
+
+.shade4{
+  background:   #FCF4E4 ;
+}
+
+.shade3-color{
+   color: #bd6501 ;
+}
+
+.shade2-color{
+  color: #ff9f00;
+}
+
+.muter-color{
+  color: #6c757d;
+}
+
+.main {
+  background: linear-gradient(to right, rgba(255,255,255,0.5), rgba(255,255,255,0.5),rgba(255,255,255,0.5)), url("images/hero.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/* menu hover */
+.link-hover{
+    font-size: 20px;
+    font-weight: bolder;
+    position: relative;
+}
+
+.link-hover::after{
+    content: "";
+    position: absolute;
+    border-radius: 20px;
+    height: 4px;
+    width: 0;
+    background-color: white;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width .3s ease-in-out;
+}
+
+.link-hover:hover::after{
+    width: 100%;
+}
+
+h1 span{
+  background: linear-gradient(90deg, #bd6501, #ff9f00,#e69500);
+  padding: 5px 10px;
+}
+
+/* button style */
+.btn{
+  background: linear-gradient(90deg, #bd6501, #e69500);
+  border: none;
+  width: 250px;
+}
+
+/* card hover */
+.card{ 
+  transition: transform .3s ease-in-out, filter .2s ease-in-out;
+}
+.card:hover{
+  transform: scale(1.02);
+} 
+/* ============================>About gujarat<================================== */
+
+.about-hs{
+  background: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('images/hp-about-image.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+  width: 100%;
+}
+
+@media (max-width: 992px) {
+  .about-hs {
+    height: 50vh; /* reduce height for medium screens */
+    background-position: top;
+  }
+}
+
+/* For phones */
+@media (max-width: 576px) {
+  .about-hs {
+    height: 60%;
+    background-position: center;
+  }
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon{
+  background-color: #bd6501;
+  border-radius: 50%;
+  padding: 5px;
+}
+
+/*======================================gallery========================*/
+/*img hover wffect*/
+.box{
+  position: relative;
+  overflow: hidden;
+}
+
+.box img{
+  width: 100%;
+  transition: transform .4s ease;
+  z-index: -1;
+}
+
+.box :hover img{
+  transform: scale(1.1);
+}
+
+.box::after{
+  content: "";
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  transition: .4s ease;
+  inset: 0;
+  opacity: 0;
+  z-index: 0;
+}
+
+.box:hover::after{
+  opacity: 1;
+}
+
+.text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: white;
+  opacity: 0;
+  transition: 0.4s;
+  z-index: 1;
+}
+
+.text p{
+  text-align: center;
+  color: white;
+}
+
+.box:hover .text {
+  opacity: 1;
+}
+
+/*hover effect over*/
+
+/*=================================contact form============================*/
+
+::placeholder{
+  font-weight: 100;
+
+}
+
+.form-control:focus{
+  box-shadow: 0 0 0 .25rem rgb(255, 159, 0);
+  border: #ff9f00;
+  outline: none;
+}
+
+.form-control{
+ font-size: 10px;
+ padding: 15px;
+}
+
+/*==============================culture & festival===============================*/
+
+.hs-culture-img{
+  background: linear-gradient(to right,rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)) ,url('images/ran-of-kuch.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+  width: 100%;
+
+}
+
+@media (max-width: 992px){
+  .hs-culture-img{
+    height: 50vh;
+    background-position: center;
+  }
+}
+
+.underline{
+  text-decoration: underline;
+  text-decoration-color: #ff9f00;
+  text-underline-offset: 9px;
+  text-decoration-thickness: 3px;
+}
+
+.border-b{
+  border-bottom: 2px solid #ff9f00;
+}
+
+.costum-accordian,.accordion-button{
+  box-shadow: none;
+  color: #f28c00;
+  font-weight: 500;
+}
+
+.accordion-button:focus{
+  box-shadow: none;
+  background: none;
+  color: #f28c00;
+}
+
+.list-color li::marker{
+  color: #f28c00;
+}
+
+.list-color li{
+  color: #6c757d;
+  margin: 7px 0;
+}
+
+.nav-pills{
+  background: #fafafa;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+.tab .nav-link{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6c757d;
+  border-radius: 50px;
+  font-weight: 600;
+}
+
+.nav-pills .nav-link.active{
+  background: #ff9f00;
+  color: #fff;
+  border-radius: 50px;
+  transition: .2s ease;
+  font-weight: 400;
+}
+
+.tab-badge .badge{
+  border: 1px solid #f28c00;
+  color: #f28c00;
+  padding: 9px;
+  border-radius: 13px;
+  margin: 2px 3px;
+}
+
+.tab-pane{
+  background: #fafafa;
+  margin-top: 25px;
+  border-radius: 15px;
+}
+
+.card-badge{
+  border: 1px solid #f28c00;
+  color: #f28c00;
+  padding: 9px;
+  border-radius: 13px;
+  margin: 2px 3px;
+}
+
+
+.card.shadow-sm:hover {
+  transform: translateY(-15px);
+}
+
+.paragrapg{
+  font-size: 20px;
+  line-height: 30px;
+}
